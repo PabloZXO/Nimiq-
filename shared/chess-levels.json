@@ -1,0 +1,8 @@
+{
+  "beginner": { "skill": null, "moveMs": 0 },
+  "easy": { "skill": 0, "moveMs": 100 },
+  "normal": { "skill": 5, "moveMs": 200 },
+  "hard": { "skill": 12, "moveMs": 450 },
+  "expert": { "skill": 17, "moveMs": 800 },
+  "master": { "skill": 20, "moveMs": 1500 }
+}

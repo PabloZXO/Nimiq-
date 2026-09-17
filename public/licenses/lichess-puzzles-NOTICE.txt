@@ -1,0 +1,11 @@
+Lichess chess puzzle database — selected training positions
+
+Source: https://database.lichess.org/#puzzles
+Archive: https://database.lichess.org/lichess_db_puzzle.csv.zst
+Downloaded: 2026-09-15
+License: Creative Commons CC0 1.0 Universal (see lichess-puzzles-cc0.txt).
+The database provider releases puzzle exports under CC0.
+
+NimDuel selects 30,000 unique puzzles from real games, 10,000 per difficulty.
+Puzzle IDs retain the lichess- prefix for provenance. Ratings and themes belong
+to the downloaded snapshot and are not updated during play.

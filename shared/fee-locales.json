@@ -1,0 +1,44 @@
+{
+  "en": {
+    "label": "Contribution to the fee reserve",
+    "total": "Total to send",
+    "note": "Each player adds 0.01 NIM to the fee reserve. The prize pool is unchanged.",
+    "rules": "Each player adds a non-refundable 0.01 NIM for outgoing fees; unused funds remain in the shared fee reserve. Cancellation returns the game entry. Extra, late or incorrect transfers are returned minus 0.01 NIM; amounts at or below this fee are held for manual resolution. Your wallet may charge its own sending fee separately.",
+    "belowFee": "This transfer is too small to cover its return fee. It remains recorded and requires manual resolution."
+  },
+  "uk": {
+    "label": "Внесок у резерв комісій",
+    "total": "Разом до переказу",
+    "note": "Кожен додає 0,01 NIM у резерв комісій. Призовий банк не зменшується.",
+    "rules": "Кожен додає неповоротні 0,01 NIM на комісії виплат; невитрачений залишок зберігається у спільному резерві. При скасуванні повертається ігровий внесок. Зайві, запізнілі або помилкові перекази повертаються за вирахуванням 0,01 NIM; суми не більші за цю комісію зберігаються для ручного розбору. Гаманець може окремо стягувати комісію за надсилання.",
+    "belowFee": "Сума замала для покриття комісії повернення. Вона залишається в обліку й потребує ручного розбору."
+  },
+  "es": {
+    "label": "Aportación a la reserva de comisiones",
+    "total": "Total a enviar",
+    "note": "Cada jugador añade 0,01 NIM a la reserva de comisiones. El bote no se reduce.",
+    "rules": "Cada jugador añade 0,01 NIM no reembolsables para las comisiones de salida; el sobrante permanece en la reserva común. Al cancelar se devuelve la aportación al juego. Los pagos extra, tardíos o incorrectos se devuelven descontando 0,01 NIM; los importes iguales o inferiores se conservan para resolución manual. Tu monedero puede cobrar aparte su comisión de envío.",
+    "belowFee": "El importe no cubre la comisión de devolución. Sigue registrado y requiere resolución manual."
+  },
+  "fr": {
+    "label": "Contribution à la réserve de frais",
+    "total": "Total à envoyer",
+    "note": "Chaque joueur ajoute 0,01 NIM à la réserve de frais. La cagnotte reste entière.",
+    "rules": "Chaque joueur ajoute 0,01 NIM non remboursable pour les frais de versement ; le solde inutilisé reste dans la réserve commune. Une annulation rembourse la participation au jeu. Les versements supplémentaires, tardifs ou incorrects sont remboursés moins 0,01 NIM ; les montants inférieurs ou égaux sont conservés pour traitement manuel. Le portefeuille peut facturer séparément ses frais d’envoi.",
+    "belowFee": "Ce montant ne couvre pas les frais de remboursement. Il reste comptabilisé et nécessite un traitement manuel."
+  },
+  "de": {
+    "label": "Beitrag zur Gebührenreserve",
+    "total": "Gesamtbetrag der Überweisung",
+    "note": "Jeder Spieler zahlt zusätzlich 0,01 NIM in die Gebührenreserve. Der Preistopf bleibt vollständig erhalten.",
+    "rules": "Jeder Spieler zahlt zusätzlich nicht erstattbare 0,01 NIM für Auszahlungsgebühren; ungenutzte Beträge bleiben in der gemeinsamen Reserve. Bei Abbruch wird der Spieleinsatz erstattet. Zusätzliche, verspätete oder fehlerhafte Überweisungen werden abzüglich 0,01 NIM zurückgezahlt; kleinere oder gleiche Beträge bleiben zur manuellen Klärung verbucht. Die Wallet kann eigene Sendegebühren separat berechnen.",
+    "belowFee": "Dieser Betrag reicht nicht für die Rückzahlungsgebühr. Er bleibt verbucht und muss manuell geklärt werden."
+  },
+  "pt": {
+    "label": "Contribuição para a reserva de taxas",
+    "total": "Total a enviar",
+    "note": "Cada jogador acrescenta 0,01 NIM à reserva de taxas. O prémio total não é reduzido.",
+    "rules": "Cada jogador acrescenta 0,01 NIM não reembolsáveis para taxas de saída; o saldo não utilizado fica na reserva comum. O cancelamento devolve a entrada no jogo. Transferências extra, tardias ou incorretas são devolvidas menos 0,01 NIM; valores iguais ou inferiores ficam registados para resolução manual. A carteira pode cobrar separadamente a sua taxa de envio.",
+    "belowFee": "O valor não cobre a taxa de devolução. Continua registado e requer resolução manual."
+  }
+}

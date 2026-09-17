@@ -1,0 +1,10 @@
+NimDuel country flags
+
+195 SVG flags obtained from FlagCDN (https://flagcdn.com), provided by
+Flagpedia.net. Downloaded 2026-09-08. Original SVG artwork is retained;
+filenames are content hashes. The server manifest maps ISO country codes
+to these local assets.
+
+Flagpedia offers its flag downloads for commercial and non-commercial use
+as public domain: https://flagpedia.net/download
+No ownership of national symbols is claimed by NimDuel.

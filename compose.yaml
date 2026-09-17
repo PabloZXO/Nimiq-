@@ -1,0 +1,68 @@
+name: nimduel
+services:
+  db:
+    image: postgres:17-alpine@sha256:18cfe3ef5e6815560c98237d6216d1e5119702fb0f3894c8785dd58b8bbe5d73
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: nimduel
+      POSTGRES_DB: nimduel
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set a unique database password}
+    volumes:
+      - payments:/var/lib/postgresql/data
+    networks: [private]
+    healthcheck:
+      test: [CMD-SHELL, 'pg_isready -U nimduel -d nimduel']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    logging:
+      options: {max-size: 10m, max-file: '3'}
+  api:
+    image: node:24-bookworm-slim@sha256:ba849c60be29959425b8734d57b8b4b7d56f98edd9504c9af091d5281095a71e
+    user: '1000:1000'
+    working_dir: /app
+    command: [node, server/index.mjs]
+    restart: unless-stopped
+    init: true
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    environment:
+      NODE_ENV: production
+      HOST: 0.0.0.0
+      PORT: '8787'
+      PUBLIC_ORIGIN: ${PUBLIC_ORIGIN:?Set the HTTPS origin}
+      DATABASE_PATH: /app/data/nimduel.sqlite
+      PAYMENTS_ENABLED: ${PAYMENTS_ENABLED:-testnet}
+      PAYMENT_NETWORK: ${PAYMENT_NETWORK:-testalbatross}
+      PAYMENT_DATABASE_URL: postgresql://nimduel:${POSTGRES_PASSWORD}@db:5432/${PAYMENT_DB_NAME:-nimduel}
+      TREASURY_KEY_PATH: /run/nimduel/${TREASURY_KEY_FILE:-test-treasury.key}
+      LEGACY_PAYMENT_DATABASE_URL: postgresql://nimduel:${POSTGRES_PASSWORD}@db:5432/nimduel
+      LEGACY_TREASURY_KEY_PATH: /run/nimduel/test-treasury.key
+    volumes:
+      - ./app:/app:ro
+      - ./data:/app/data
+      - ./secrets:/run/nimduel:ro
+    tmpfs: [/tmp]
+    networks:
+      private:
+      proxy:
+        aliases: [nimduel-api]
+    depends_on:
+      db: {condition: service_healthy}
+    healthcheck:
+      test: [CMD, node, -e, "fetch('http://127.0.0.1:8787/api/health').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))"]
+      interval: 15s
+      timeout: 5s
+      retries: 4
+      start_period: 30s
+    logging:
+      options: {max-size: 10m, max-file: '3'}
+networks:
+  private:
+    internal: true
+  proxy:
+    external: true
+    name: krok-store_default
+volumes:
+  payments:

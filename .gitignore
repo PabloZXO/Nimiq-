@@ -1,0 +1,27 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+data/
+coverage/
+*.log
+*.sqlite*
+.DS_Store
+
+# Private runtime material and deployment backups must never be published.
+secrets/
+backups/
+*.key
+*.pem
+*.p12
+*.pfx
+*.sql
+*.dump
+*.bak
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+id_rsa
+id_ed25519
